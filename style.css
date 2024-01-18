@@ -2,71 +2,66 @@
     margin: 0;
     padding: 0;
 }
-div{
-    width: 420px;
-    height: auto;
-    background-color: #333333;
-    padding: 20px;
-    margin: auto;
-    margin-top: 150px;
-    border-radius: 10px;
-}
 body{
-    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
 }
-h2{
-    width: 400px;
+.calculator{
+    position: relative;
+    width: 300px;
+}
+.buttons{
+    position: relative;
+    display: grid;
+}
+.calculator .buttons #value{
+    position: relative;
     height: 100px;
-    background-color: #a7af7c;
-    ;
-    border: 1px solid #000;
-    text-align: right;
-    font-size: 40px;
-    padding-top: 38px;
-    padding-right: 15px;
+    width: calc(100%-16px);
+    background: #a7af7c;
+    grid-column: span 4;
+    left: 8px;
+    margin-right: 13px;
+    margin-bottom: 12px;
+    line-height: 100px;
+    padding: 0 20px;
     border-radius: 10px;
-    margin-bottom: 8px;
+    text-align: right;
+    font-size: 1.5em;
+    color: #3a3c2e;
+    overflow: hidden;
     user-select: none;
 }
-.clear{
-    width: 130px;
-    height: 45px;
-    padding: 10px;
-    margin: 6px;
-    background-color: #fc0606;
-    color: #fff;
-    border: 1px solid #000;
-    border-radius: 6px;
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 20px;
-    font-weight: bold;
-}
-.sign{
-    width: 120px;
-    height: 45px;
-    background-color: #808080;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #000;
-}
-button{
-    width: 79px;
+.buttons span{
     position: relative;
     padding: 10px;
     margin: 6px;
     min-width: 40px;
     font-size: 1.1em;
-    font-weight: bold;
-    display: inline-block;
+    display: flex;
     justify-content: center;
     align-items: center;
-    color: #000000;
+    color: #999;
     border-radius: 6px;
-    border: 1px solid #000;
+    background: linear-gradient(#555353,#363535);
     cursor: pointer;
     user-select: none;
-    background-color: #e2e0e0;
 }
-
+.buttons span#clear{
+    grid-column: span 2;
+    background: #f44336;
+    color: #fff;
+}
+.buttons span#plus{
+    grid-row: span 2;
+    background: #31a935;
+    color: #fff;
+}
+.buttons span#equal{
+    grid-column: span 1;
+    background: #2196f3;
+    color: #fff;
+}
